@@ -12,6 +12,6 @@
     <modules>
         <module>app-autor</module>
         <module>app-livro</module>
-        <module>app-reserva</module>
-    </modules>
+    <module>app-livro-web</module>
+  </modules>
 </project>

@@ -73,5 +73,6 @@ class A {
         Venda venda = new Venda();
         venda.produtosComDesconto().add("");
         venda.produtosComDesconto().remove("");
+        venda.aplicarDesconto(new Simples());
     }
 }
