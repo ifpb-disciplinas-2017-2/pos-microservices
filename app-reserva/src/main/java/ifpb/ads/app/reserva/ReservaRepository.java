@@ -20,7 +20,8 @@ public class ReservaRepository {
     }
 
     public Reserva findOne(long id) {
-        return em.find(Reserva.class, id);
+        Reserva find = em.find(Reserva.class, id);
+        return find;
     }
 
     public Reserva save(Reserva reserva) {

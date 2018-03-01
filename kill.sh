@@ -4,3 +4,6 @@ cd ..
 cd app-livro-web
 docker-compose down
 cd ..
+cd app-reserva
+docker-compose down
+cd ..
