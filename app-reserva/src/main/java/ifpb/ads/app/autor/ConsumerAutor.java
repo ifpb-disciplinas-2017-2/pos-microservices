@@ -38,9 +38,11 @@ public class ConsumerAutor {
         JsonArray readEntity = get.readEntity(JsonArray.class);
         return readEntity.getValuesAs(JsonObject.class)
                 .stream()
-                .map((JsonObject t) -> new Autor(t.getString("nome"),
-                t.getString("email"),
-                t.getString("abreviacao")))
+                .map((JsonObject t)
+                        -> new Autor(t.getString("nome"),
+                        t.getString("email"),
+                        t.getString("abreviacao"),
+                        t.getString("_id")))
                 .collect(Collectors.toList());
     }
 
@@ -56,5 +58,11 @@ public class ConsumerAutor {
         System.out.println(post.readEntity(String.class));
         System.out.println(post.getHeaderString("location"));
 
+    }
+
+    public void excluir(Autor autor) {
+        WebTarget delete = target.path("{id}").resolveTemplate("id", autor.getId());
+        Response response = delete.request(MediaType.APPLICATION_JSON).delete();
+        System.out.println(response.readEntity(String.class));
     }
 }

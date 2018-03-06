@@ -27,7 +27,12 @@ public class ControladorDeAutor {
         consumer.salvar(autor);
         return null;
     }
+    public String excluir(Autor autor) {
+        consumer.excluir(autor);
+        return null;
+    }
 
+    
     public Autor getAutor() {
         return autor;
     }

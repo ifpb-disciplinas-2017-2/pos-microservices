@@ -16,6 +16,9 @@
                 <h:column>
                     <h:outputText value="#{autor.nome}" />
                 </h:column>
+                <h:column>
+                    <h:commandButton value="excluir" action="#{controladorDeAutor.excluir(autor)}"/>
+                </h:column>
             </h:dataTable> 
         </h:form>
     </h:body>

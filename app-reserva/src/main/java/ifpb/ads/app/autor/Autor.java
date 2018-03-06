@@ -14,14 +14,16 @@ public class Autor implements Serializable {
     private String nome;
     private String email;
     private String abreviacao;
-
+    private String _id;
+    
     public Autor() {
     }
 
-    public Autor(String nome, String email, String abreviacao) {
+    public Autor(String nome, String email, String abreviacao, String _id) {
         this.nome = nome;
         this.email = email;
         this.abreviacao = abreviacao;
+        this._id = _id;
     }
 
     public String getNome() {
@@ -48,4 +50,13 @@ public class Autor implements Serializable {
         this.abreviacao = abreviacao;
     }
 
+    public String getId() {
+        return _id;
+    }
+
+    public void setId(String _id) {
+        this._id = _id;
+    }
+
+    
 }

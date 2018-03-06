@@ -4,7 +4,6 @@ var mongo = require('mongoose'),
 exports.findAll = function (req, res) {
     var autorProjection = {
         __v: false,
-        _id: false,
         ativo: false,
         updated_at: false
     };
